@@ -14,6 +14,7 @@ This project is a Question & Answering bot that can answer questions based on th
 *   **Step 8: Error Handling:** Implemented `try...except` blocks to gracefully handle potential errors during file upload and AI processing, making the app more robust.
 *   **Step 9: Code Refactoring and UI Intro:** Reorganized the code into functions for better readability and maintainability, and added an introductory message to the app's UI.
 *   **Step 10: Conversation History:** Implemented session state to keep track of and display the conversation history.
+*   **Step 11: Enable Agent Code Execution:** Updated the LangChain agent to permit code execution, which is required for it to analyze the pandas DataFrame.
 
 ## Features
 

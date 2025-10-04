@@ -27,7 +27,7 @@ def get_answer(data, question, api_key):
     with st.spinner("Thinking..."):
         try:
             llm = OpenAI(api_key=api_key)
-            agent = create_pandas_dataframe_agent(llm, data, verbose=True)
+            agent = create_pandas_dataframe_agent(llm, data, verbose=True, allow_dangerous_code=True)
             return agent.run(question)
         except Exception as e:
             st.error(f"An error occurred with the AI model: {e}")
