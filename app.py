@@ -42,12 +42,19 @@ def display_history():
             st.markdown(f"**A{len(st.session_state.history) - i}:** {chat['answer']}")
             st.markdown("---")
 
+def display_sidebar():
+    """Displays the sidebar with a 'Start Over' button."""
+    st.sidebar.title("Controls")
+    if st.sidebar.button("Start Over"):
+        st.session_state.history = []
+
 def main():
     """Main function to run the Streamlit app."""
     setup_environment()
     api_key = get_api_key()
 
     display_header()
+    display_sidebar()
 
     if "history" not in st.session_state:
         st.session_state.history = []
